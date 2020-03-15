@@ -1,8 +1,11 @@
+#
+# a list of supported K8S version can be obtained from https://cloud.google.com/run/docs/gke/cluster-versions
+# 
 # create a new K8S cluster with a default node pool (2 nodes)
 gcloud container clusters create krudisar-k8s \
 --num-nodes=2 \
 --zone europe-west1-d \
---cluster-version 1.14.9-gke.23
+--cluster-version 1.14.10-gke.24
 
 
 # crate a GPU enable node pool and assign it to already existing K8S cluster
