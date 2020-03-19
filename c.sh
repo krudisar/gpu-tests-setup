@@ -11,8 +11,8 @@ gcloud container clusters create krudisar-k8s \
 # crate a GPU enable node pool and assign it to already existing K8S cluster
 gcloud container node-pools \
 create gpu-pool \
---num-nodes=2 \
---accelerator type=nvidia-tesla-p100,count=1 \
+--num-nodes=1 \
+--accelerator type=nvidia-tesla-p100,count=2 \ # we need to use one ML pod along with ML job--> count=2 
 --zone europe-west1-d \
 --cluster krudisar-k8s
 
